@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html class="biz-udgothic-regular">
+
+<head>
+    <meta charset="UTF=8">
+    <title>testpage</title>
+    <!--公開するときにはタイトルを修正する-->
+    <meta name="description" content="仮置き">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="noindex, follow">
+    <!--公開するときにはこのメタタグを消す-->
+    <link href="./css/reset.css" rel="stylesheet">
+    <link href="./css/common.css" rel="stylesheet">
+    <link href="./css/class.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700&family=Mochiy+Pop+P+One&family=Zen+Antique&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-width">
+            <div class="header-logoandtitle">
+                <a class="header-logo" href="./index.html">
+                    <img src="./images/logo-kari.jpg">
+                    <!--あとでロゴの写真を正式なものに差し替えておく-->
+                </a>
+                <p class="header-title">福岡県立修猷館高等学校
+                    <br>第80回修猷大文化祭HP
+                </p>
+            </div>
+            <button class="toggle-menu-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="header-site-menu">
+                <nav class="site-menu">
+                    <ul>
+                        <li class="navtext"><a href="#top">トップ</a></li>
+                        <li class="navtext"><a href="#map">マップ</a></li>
+                        <!--一旦すべて書き終わったらliの中の要素にリンクを貼る-->
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-header" id="top">
+            <div class="daiji">
+                <img src="./images/daiji-kari.jpg">
+            </div>
+            <div class="time-container">
+                <h2>開催まで</h2>
+                <div class="time-element">
+                    <div class="time"><span id="day"></span></div>
+                    <div class="timelog">
+                        <p>日</p>
+                    </div>
+                </div>
+                <p class="colon">：</p>
+
+                <div class="time-element">
+                    <div class="time"><span id="hour"></span></div>
+                    <div class="timelog">
+                        <p>時間</p>
+                    </div>
+                </div>
+
+                <p class="colon">：</p>
+
+                <div class="time-element">
+                    <div class="time"><span id="min"></span></div>
+                    <div class="timelog">
+                        <p>分</p>
+                    </div>
+                </div>
+
+                <p class="colon">：</p>
+
+                <div class="time-element">
+                    <div class="time"><span id="sec"></span></div>
+                    <div class="timelog">
+                        <p>秒</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--題字を回収してデータを貰ったら打ち込む-->
+            <p class="date">2026年3月20日 <small><small>(金・祝)</small></small><br>10:00-15:30</p>
+            <p class="date">2026年3月21日 <small><small>(土)</small></small><br>9:00-15:00</p>
+        </div>
+        <div class="slogan" id="slogan">
+            <h1>スローガン紹介</h1>
+            <div class="section-gradient-top"></div>
+            <div class="miryo">
+                <p class="miryo-title">魅了</p>
+            </div>
+            <!--cssで魅了の字を大きくしたい、中央揃えにしたい、3つのみりょうもいい感じに調整できたら嬉しいかもしれない-->
+            <p class="miryo-shousai">
+                鬼了：他を圧倒する熱量を持ってひとつの事に打ち込む<br>
+                魅了：企画を創り上げていく生徒たち本人も含め、第80回修猷大文化祭に関わる全てを魅了する<br>
+                未了：全員の熱量で作り上げられた大文化祭は2日間で終わらず、ここで得た学びで未来を切り拓いていく
+                「鬼了」をもって「魅了」し、「未了」の大文化祭を目指す。<br>
+                これらの意味を込め第80回修猷大文化祭のスローガンとする。</p>
+            <div class="section-gradient-bottom"></div>
+        </div>
+        <div class="message" id="message">
+            <h1>メッセージ</h1>
+            <div class="message-box">
+                <img class="message-photo" src="./images/test.jpg" alt="">
+                <div class="message-text">
+                    <span class="name">野本準二</span>
+                    <br>
+                    <span class="yakushoku">館長</span>
+                    <br>
+                    <p>ここにテキストを挿入</p>
+                </div>
+            </div>
+            <div class="message-box">
+                <img class="message-photo" src="./images/test.jpg" alt="">
+                <div class="message-text">
+                    <span class="name">大西佑奈</span>
+                    <br>
+                    <span class="yakushoku">運営委員長</span>
+                    <br>
+                    <p>
+                        ばかみたいに真っ直ぐ、やりたいことに向き合う。そんな当たり前ではないことが出来る。それが修猷大文化祭である。
+                        今日までの過程の中で、避けられなかった対立も、葛藤もあった。それでも私達は向き合い、全力でぶつかり合いながら共に走ってきた。理想を理想のまま終わらせない努力を積み上げた。私達が今日まで費やした時間、労力、想像、工夫……その全てが今日の熱をつくりあげてきた。全員が主役だ。
+                        “あなたの大文化祭”だ。あなたの企画の熱が、ステージの熱が、そして何よりもあなた自身の熱が、すべてを魅了する準備はもう出来ている。そうだろう？
+                        修猷生よ、私達の「鬼了」をもってすべてを「魅了」し、「未了」の第80回修猷大文化祭を実現しようではないか。私達の、私達にしかできない修猷大文化祭を、すべてに刻み込んでやろう。
+                    </p>
+                </div>
+            </div>
+            <div class="message-box">
+                <img class="message-photo" src="./images/test.jpg" alt="">
+                <div class="message-text">
+                    <span class="name">島田壮大</span>
+                    <br>
+                    <span class="yakushoku">総務</span>
+                    <br>
+                    <p>
+                        本気とはなんだろうか。
+                        青春とはなんだろうか。
+                        その答えを示すために、仲間と協力し、楽しみ、時にぶつかりながら、全員が同じ方向を向いて努力を重ね、今日という日を迎えた。
+                        修猷大文化祭を唯一無二のものにするために、私たちは本気で企画やステージ、作品を創り上げてきた。
+                        だから、仲間を、観客を、そして自分を「魅了」する。
+                        そのために積み上げてきたすべてを、今日ここで開花させよう。
+                        すると、その熱は新たな遺伝子となり、修猷のDNAに刻まれていくだろう。
+                        大文化祭とはなんだろうか。
+                        修猷とはなんだろうか。
+                        あなたは今日、その答えの輪郭を目の当たりにすることとなる。
+                        ここでヒントを見つけ、いつか答えに辿り着いてほしい。
+
+                        さあ、共に歴史を紡ごう。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="section-gradient-top1"></div>
+        <div class="section-unified-bg">
+        <div class="annai" id="map">
+            <h1>マップ</h1>
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.8249999960913!2d130.356341!3d33.5838927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354193a435436e39%3A0x27c45e52483debbe!2z56aP5bKh55yM56uL5L-u54y36aSo6auY562J5a2m5qCh!5e0!3m2!1sja!2sjp!4v1766908186345!5m2!1sja!2sjp"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+    </main>
+</body>
+<footer class="footer">
+    <div class="footer-0">
+        <a href="./index.html">
+            <img class="footer-logo" src="./images/logo-kari.jpg">
+            <!--あとでロゴの写真を正式なものに差し替えておく-->
+        </a>
+        <p class="footer-title">福岡県立修猷館高等学校大文化祭HP</p>
+    </div>
+    <div class="footer-1">
+        <nav class="footer-site-menu">
+            <ul class="footer-nav">
+                <li class="footer-navtext"><a href="#top">トップ</a></li>
+                <li class="footer-navtext"><a href="#map">マップ</a></li>
+                <!--一旦すべて書き終わったらliの中の要素にリンクを貼る-->
+                <!--フッターをすべて書き終わったらサブページにコピペする。正直な話ヘッダーもこれでいいかもしれない。ミスを減らせると思う-->
+            </ul>
+        </nav>
+        <p class="copyright"><small>&copy;第80回修猷大文化祭運営委員会広報部署</small></p>
+    </div>
+</footer>
+
+</html>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+        const countdownWrapper = document.querySelector(".countdown");
+
+        const day = document.getElementById("day");
+        const hour = document.getElementById("hour");
+        const min = document.getElementById("min");
+        const sec = document.getElementById("sec");
+
+        let prev = { d: null, h: null, m: null, s: null };
+        let countdownInterval;
+
+        function blink(el) {
+            el.classList.remove("blink"); // 再発火用
+            void el.offsetWidth;          // 強制リフロー
+            el.classList.add("blink");
+        }
+
+        function countdown() {
+            const now = new Date();
+            const target = new Date(2026, 2, 20, 10, 0, 0);
+            const diff = target - now;
+
+            if (diff <= 0) {
+                clearInterval(countdownInterval);
+                countdownWrapper.style.display = "none";
+                return;
+            }
+
+            const d = Math.floor(diff / 86400000);
+            const h = Math.floor(diff / 3600000) % 24;
+            const m = Math.floor(diff / 60000) % 60;
+            const s = Math.floor(diff / 1000) % 60;
+
+            if (prev.d !== d) { day.textContent = String(d).padStart(2, "0"); blink(day); }
+            if (prev.h !== h) { hour.textContent = String(h).padStart(2, "0"); blink(hour); }
+            if (prev.m !== m) { min.textContent = String(m).padStart(2, "0"); blink(min); }
+            if (prev.s !== s) { sec.textContent = String(s).padStart(2, "0"); blink(sec); }
+
+            prev = { d, h, m, s };
+        }
+
+        countdown();
+        countdownInterval = setInterval(countdown, 1000);
+
+    });
+
+    window.addEventListener('load', function () {
+        var $button = document.querySelector('.toggle-menu-button');
+        var $menu = document.querySelector('.header-site-menu');
+        $button.addEventListener('click', function () {
+            if ($menu.classList.contains('is-show')) {
+                $menu.classList.remove('is-show');
+            }
+            else {
+                $menu.classList.add('is-show');
+            }
+        });
+    });
+</script>
