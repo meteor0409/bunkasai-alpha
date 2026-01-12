@@ -31,20 +31,22 @@
                     <br>第80回修猷大文化祭HP
                 </p>
             </div>
-            <button class="toggle-menu-button">
+            <button class="menu" aria-label="menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+
+            <!-- ナビゲーション -->
             <div class="header-site-menu">
                 <nav class="site-menu">
                     <ul>
                         <li class="navtext"><a href="#top">トップ</a></li>
                         <li class="navtext"><a href="#map">マップ</a></li>
-                        <!--一旦すべて書き終わったらliの中の要素にリンクを貼る-->
                     </ul>
                 </nav>
             </div>
+
         </div>
     </header>
     <main>
@@ -158,20 +160,21 @@
                     </p>
                 </div>
             </div>
-        </div> 
+        </div>
         <div class="section-gradient-top1"></div>
         <div class="section-unified-bg">
-        <div class="annai" id="map">
-           <h1>マップ</h1>
-            <div class="map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.8249999960913!2d130.356341!3d33.5838927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354193a435436e39%3A0x27c45e52483debbe!2z56aP5bKh55yM56uL5L-u54y36aSo6auY562J5a2m5qCh!5e0!3m2!1sja!2sjp!4v1766908186345!5m2!1sja!2sjp"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+            <h1>マップ</h1>
+            <div class="annai" id="map">
+
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.8249999960913!2d130.356341!3d33.5838927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354193a435436e39%3A0x27c45e52483debbe!2z56aP5bKh55yM56uL5L-u54y36aSo6auY562J5a2m5qCh!5e0!3m2!1sja!2sjp!4v1766908186345!5m2!1sja!2sjp"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
             </div>
         </div>
-    </div>
     </main>
 </body>
 <footer class="footer">
@@ -245,15 +248,24 @@
     });
 
     window.addEventListener('load', function () {
-        var $button = document.querySelector('.toggle-menu-button');
-        var $menu = document.querySelector('.header-site-menu');
-        $button.addEventListener('click', function () {
-            if ($menu.classList.contains('is-show')) {
-                $menu.classList.remove('is-show');
-            }
-            else {
-                $menu.classList.add('is-show');
-            }
+
+        var button = document.querySelector('.menu');
+        var menu = document.querySelector('.header-site-menu');
+        var links = document.querySelectorAll('.site-menu a');
+
+        // ハンバーガーボタン開閉
+        button.addEventListener('click', function () {
+            menu.classList.toggle('is-show');
+            button.classList.toggle('close');
         });
+
+        // リンククリックで自動クローズ
+        links.forEach(function (link) {
+            link.addEventListener('click', function () {
+                menu.classList.remove('is-show');
+                button.classList.remove('close');
+            });
+        });
+
     });
 </script>
