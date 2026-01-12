@@ -13,6 +13,12 @@ h1 {
   margin-bottom: 20px;
 }
 
+.main-header {
+  display: block;
+  margin-top: -80px;
+  padding-top: 80px;
+}
+
 .menulist {
   position: relative;
   padding: 0.1em 0.5em;
@@ -291,7 +297,6 @@ html {
       rgba(175, 223, 228, 0.5),
       #e3afde 20px);
   padding-top: 20px;
-  /* グラデーション分の余白 */
 }
 
 .annai {
@@ -313,12 +318,30 @@ html {
   border: 0;
 }
 
-
-.main-header {
-  display: block;
-  margin-top: -80px;
-  padding-top: 80px;
+.comingsoon-text {
+  font-size: 9rem;
+  text-align: center;
+  color: #fff;
+  font-family: "Squada One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
+
+.gradation {
+  height: 80px;
+  background: linear-gradient(
+    to bottom,
+    #e3afde 0%,
+    rgba(73, 73, 73, 0.8) 100%
+  );
+}
+
+.comingsoon {
+  background-color: rgba(73, 73, 73, 0.8);
+  padding: 40px 0 80px;
+}
+
+
 
 .footer {
   background-color: rgba(0, 0, 0, 0.8);
