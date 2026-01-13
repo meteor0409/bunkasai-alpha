@@ -377,15 +377,14 @@ html {
   font-size: 1rem;
   padding-left: 20px;
   padding-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-site-menu ul li {
   margin-left: 20px;
   margin-right: 20px;
-}
-
-.footer-1 {
-  text-align: center;
 }
 
 .footer-navtext {
@@ -403,6 +402,7 @@ html {
 
 .copyright {
   margin-top: 5px;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
