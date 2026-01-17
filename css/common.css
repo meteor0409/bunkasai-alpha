@@ -4,7 +4,7 @@
   position: sticky;
   top: 0;
   height: 80px;
-  background-color: rgba(0, 164, 151, 0.95);
+  background-color: rgba(168, 130, 221, 0.95);
   color: #fff;
   z-index: 100;
 }
@@ -215,7 +215,7 @@
     left: 0;
     width: 100%;
     height: calc(100vh - 80px);
-    background-color: cadetblue;
+    background-color: #FFFEF6;
     opacity: 0;
     transform: translateY(-10px);
     pointer-events: none;
@@ -238,5 +238,8 @@
     font-size: 2rem;
     display: block;
     padding: 15px 0;
+    color: #000;
+    text-decoration: underline;
+    text-decoration-color: #000;
   }
 }
