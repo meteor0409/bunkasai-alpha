@@ -329,16 +329,6 @@ html {
   border: 0;
 }
 
-.comingsoon-text {
-  font-size: 3rem;
-  text-align: center;
-  color: #fff;
-  font-family: "Noto Serif", serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
-}
-
 .gradation {
   height: 80px;
   background: linear-gradient(
@@ -353,7 +343,15 @@ html {
   padding: 40px 0 80px;
 }
 
-
+.comingsoon-text {
+  font-size: 50px;
+  text-align: center;
+  color: #fff;
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
 
 .footer {
   background-color: rgba(0, 0, 0, 0.8);
