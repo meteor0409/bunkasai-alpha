@@ -49,6 +49,10 @@ body {
   justify-content: center;
 }
 
+.daiji-1 {
+  transform: scale(0.75);
+}
+
 .countdown {
   display: flex;
   justify-content: center;
@@ -138,8 +142,10 @@ body {
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  border-bottom: 2px solid rgba(33, 37, 41, 0.3);
-  border-left: 2px solid rgba(33, 37, 41, 0.3);
+  border: 1px solid rgba(33, 37, 41, 0.25);
+  box-shadow:
+  0 1px 2px rgba(33, 37, 41, 0.25),
+  4px 6px 14px rgba(33, 37, 41, 0.35);
 }
 
 .time p {
@@ -189,8 +195,10 @@ body {
   background-color: rgba(168, 130, 221, 0.50);
   border-radius: 10px;
   padding: 10px 10px 10px 10px;
-  border-bottom: 2px solid rgba(33, 37, 41, 0.3);
-  border-left: 2px solid rgba(33, 37, 41, 0.3);
+  border: 1px solid rgba(33, 37, 41, 0.25);
+  box-shadow:
+  0 1px 2px rgba(33, 37, 41, 0.25),
+  4px 6px 14px rgba(33, 37, 41, 0.35);
 }
 
 .navtext {
@@ -219,6 +227,7 @@ html {
 
 .slogan {
   margin-top: 30px;
+  background-color: #E0EFDE;
 }
 
 .miryo {
@@ -227,27 +236,30 @@ html {
   background-color: #E0EFDE;
 }
 
+
 @media screen and (max-width: 768px) {
     .miryo {
       flex-wrap: wrap;
     }
 }
 
-.miryo-title {
+.miryo-daiji {
   padding: 10px 10px 10px 10px;
   margin: 0 auto;
   width: 205px;
 }
 
 .miryo-shousai {
-  font-size: 20px;
+  font-size: 19px;
   background-color: rgba(255, 255, 255, 0.3);
   color: #000;
   margin: auto 50px;
   padding: 10px;
   border-radius: 7px;
-  border-bottom: 2px solid rgba(33, 37, 41, 0.3);
-  border-left: 2px solid rgba(33, 37, 41, 0.3);
+  border: 1px solid rgba(33, 37, 41, 0.25);
+  box-shadow:
+  0 1px 2px rgba(33, 37, 41, 0.25),
+  4px 6px 14px rgba(33, 37, 41, 0.35);
 }
 
 .miryo-shousai-1 {
@@ -269,11 +281,16 @@ html {
   align-items: flex-start;
   gap: 20px;
   margin-bottom: 24px;
-  border: 2px solid #212529;
   padding: 10px;
   background-color: rgba(179, 242, 221, 0.5);
   border-radius: 7px;
+  border: 1px solid rgba(33, 37, 41, 0.25);
+  box-shadow:
+  0 1px 2px rgba(33, 37, 41, 0.25),
+  4px 6px 14px rgba(33, 37, 41, 0.35);
+
 }
+
 
 .message-photo {
   width: 300px;
@@ -299,7 +316,7 @@ html {
   font-size: 18px;
   margin-bottom: 10px;
   margin-top: -30px;
-  border-bottom: 2px solid #212529;
+  border-bottom: 1.5px solid #212529;
 }
 
 .section-unified-bg {
@@ -320,7 +337,10 @@ html {
   height: 66.6vh;
   margin: 0 auto;
   position: relative;
-  padding-bottom: 20px;
+  border: 1px solid rgba(33, 37, 41, 0.25);
+  box-shadow:
+  0 1px 2px rgba(33, 37, 41, 0.25),
+  4px 6px 14px rgba(33, 37, 41, 0.35);
 }
 
 .map iframe {
@@ -357,10 +377,13 @@ html {
   background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
   padding-bottom: 30px;
+  border: 1px solid rgba(33, 37, 41, 0.25);
+  box-shadow:
+  0 1px 2px rgba(33, 37, 41, 0.25),
+  4px 6px 14px rgba(33, 37, 41, 0.35);
 }
 
 .footer-0 {
-  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -371,13 +394,15 @@ html {
 }
 
 .footer-logo {
-  width: 50px;
+  max-width: 80vw;
+  margin: 0 auto;
   height: auto;
   display: block;
 }
 
 .footer-title {
   font-size: 20px;
+  text-align: center;
 }
 
 .footer-0 p {
