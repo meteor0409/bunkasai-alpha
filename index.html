@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html class="biz-udgothic-regular">
-
 <head>
     <meta charset="UTF=8">
     <title>testpage</title>
-    <!--公開するときにはタイトルを修正する-->
     <meta name="description" content="仮置き">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="robots" content="noindex, follow">
-    <!--公開するときにはこのメタタグを消す-->
     <link href="./css/reset.css" rel="stylesheet">
     <link href="./css/common.css" rel="stylesheet">
     <link href="./css/class.css" rel="stylesheet">
@@ -16,14 +13,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <header class="header">
         <div class="header-width">
             <div class="header-logoandtitle">
                 <a class="header-logo" href="./index.html">
                     <img src="./images/daiji_1.png">
-                    <!--あとでロゴの写真を正式なものに差し替えておく-->
                 </a>
             </div>
             <button class="menu" aria-label="menu">
@@ -31,8 +26,6 @@
                 <span></span>
                 <span></span>
             </button>
-
-            <!-- ナビゲーション -->
             <div class="header-site-menu">
                 <nav class="site-menu">
                     <ul>
@@ -41,7 +34,6 @@
                     </ul>
                 </nav>
             </div>
-
         </div>
     </header>
     <main>
@@ -58,23 +50,19 @@
                     </div>
                 </div>
                 <p class="colon">：</p>
-
                 <div class="time-element">
                     <div class="time"><span id="hour"></span></div>
                     <div class="timelog">
                         <p>時間</p>
                     </div>
                 </div>
-
                 <p class="colon">：</p>
-
                 <div class="time-element">
                     <div class="time"><span id="min"></span></div>
                     <div class="timelog">
                         <p>分</p>
                     </div>
                 </div>
-
                 <p class="colon">：</p>
 
                 <div class="time-element">
@@ -84,8 +72,6 @@
                     </div>
                 </div>
             </div>
-
-            <!--題字を回収してデータを貰ったら打ち込む-->
             <p class="date">令和8年3月20日 <small><small><small></small>(金・祝)</small></small>
                 <br>10:00-15:30
                 <br>令和8年3月21日 <small><small>(土)</small></small>
@@ -97,8 +83,6 @@
             <h1 class="miryo-title">スローガン紹介</h1>
             <div class="miryo">
                 <img class="miryo-daiji" src="images/miryo-tate.png">
-
-                <!--cssで魅了の字を大きくしたい、中央揃えにしたい、3つのみりょうもいい感じに調整できたら嬉しいかもしれない-->
                 <p class="miryo-shousai">
                     <span class="miryo-shousai-1">
                         鬼了: 他を圧倒する熱量をもってひとつの事に打ち込む。<br>
@@ -189,7 +173,6 @@
         <div class="footer-0">
             <a href="./index.html">
                 <img class="footer-logo" src="./images/daiji_1.png">
-                <!--あとでロゴの写真を正式なものに差し替えておく-->
             </a>
             <p class="footer-title">福岡県立修猷館高等学校<br>修猷大文化祭公式HP</p>
         </div>
@@ -198,8 +181,6 @@
                 <ul class="footer-nav">
                     <li class="footer-navtext"><a href="#top">トップ</a></li>
                     <li class="footer-navtext"><a href="#map">アクセス</a></li>
-                    <!--一旦すべて書き終わったらliの中の要素にリンクを貼る-->
-                    <!--フッターをすべて書き終わったらサブページにコピペする。正直な話ヘッダーもこれでいいかもしれない。ミスを減らせると思う-->
                 </ul>
             </nav>
             <p class="copyright"><small>&copy;第80回修猷大文化祭運営委員会広報部署</small></p>
@@ -212,70 +193,40 @@
 <script>
     document.addEventListener("DOMContentLoaded", () => {
 
-        const countdownWrapper = document.querySelector(".countdown");
+  const countdownWrapper = document.querySelector(".countdown");
 
-        const day = document.getElementById("day");
-        const hour = document.getElementById("hour");
-        const min = document.getElementById("min");
-        const sec = document.getElementById("sec");
+  const day  = document.getElementById("day");
+  const hour = document.getElementById("hour");
+  const min  = document.getElementById("min");
+  const sec  = document.getElementById("sec");
 
-        let prev = { d: null, h: null, m: null, s: null };
-        let countdownInterval;
+  const target = new Date(2026, 2, 20, 10, 0, 0);
+  let timerId;
 
-        function blink(el) {
-            el.classList.remove("blink"); // 再発火用
-            void el.offsetWidth;          // 強制リフロー
-            el.classList.add("blink");
-        }
+  function update() {
+    const now = new Date();
+    const diff = target - now;
 
-        function countdown() {
-            const now = new Date();
-            const target = new Date(2026, 2, 20, 10, 0, 0);
-            const diff = target - now;
+    if (diff <= 0) {
+      clearTimeout(timerId);
+      if (countdownWrapper) countdownWrapper.style.display = "none";
+      return;
+    }
 
-            if (diff <= 0) {
-                clearInterval(countdownInterval);
-                countdownWrapper.style.display = "none";
-                return;
-            }
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor(diff / 3600000) % 24;
+    const m = Math.floor(diff / 60000) % 60;
+    const s = Math.floor(diff / 1000) % 60;
 
-            const d = Math.floor(diff / 86400000);
-            const h = Math.floor(diff / 3600000) % 24;
-            const m = Math.floor(diff / 60000) % 60;
-            const s = Math.floor(diff / 1000) % 60;
+    day.textContent  = String(d).padStart(2, "0");
+    hour.textContent = String(h).padStart(2, "0");
+    min.textContent  = String(m).padStart(2, "0");
+    sec.textContent  = String(s).padStart(2, "0");
 
-            if (prev.d !== d) { day.textContent = String(d).padStart(2, "0"); blink(day); }
-            if (prev.h !== h) { hour.textContent = String(h).padStart(2, "0"); blink(hour); }
-            if (prev.m !== m) { min.textContent = String(m).padStart(2, "0"); blink(min); }
-            if (prev.s !== s) { sec.textContent = String(s).padStart(2, "0"); blink(sec); }
+    const delay = 1000 - (Date.now() % 1000);
+    timerId = setTimeout(update, delay);
+  }
 
-            prev = { d, h, m, s };
-        }
-
-        countdown();
-        countdownInterval = setInterval(countdown, 1000);
-
-    });
-
-    window.addEventListener('load', function () {
-
-        var button = document.querySelector('.menu');
-        var menu = document.querySelector('.header-site-menu');
-        var links = document.querySelectorAll('.site-menu a');
-
-        // ハンバーガーボタン開閉
-        button.addEventListener('click', function () {
-            menu.classList.toggle('is-show');
-            button.classList.toggle('close');
-        });
-
-        // リンククリックで自動クローズ
-        links.forEach(function (link) {
-            link.addEventListener('click', function () {
-                menu.classList.remove('is-show');
-                button.classList.remove('close');
-            });
-        });
-
-    });
+  update();
+});
 </script>
