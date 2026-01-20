@@ -55,11 +55,11 @@ body {
 .daiji {
   display: flex;
   justify-content: center;
+  user-select: none;
 }
 
 .daiji-1 {
   transform: scale(0.75);
-  user-select: none;
 }
 
 .countdown {
@@ -468,3 +468,4 @@ html {
   }
 
 }
+
