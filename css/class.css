@@ -59,6 +59,7 @@ body {
 
 .daiji-1 {
   transform: scale(0.75);
+  user-select: none;
 }
 
 .countdown {
@@ -465,4 +466,5 @@ html {
   .message-text {
     width: 100%;
   }
+
 }
