@@ -55,8 +55,14 @@ body {
 .daiji {
   display: flex;
   justify-content: center;
-  user-select: none;
 }
+
+.daiji img {
+  -webkit-user-select: none; /* iOS Safari */
+  user-select: none;
+  -webkit-touch-callout: none; /* 長押しメニュー無効 */
+}
+
 
 .daiji-1 {
   transform: scale(0.75);
@@ -280,7 +286,6 @@ html {
 
 .miryo-shousai-2 {
   display: block;
-  text-align: center;
 }
 
 .message {
@@ -424,9 +429,15 @@ html {
   font-size: 1rem;
   padding-left: 20px;
   padding-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-top: 1.5px solid #ECEAF2;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-site-menu ul li {
@@ -440,6 +451,7 @@ html {
   font-size: 20px;
   padding-top: 4px;
   padding-bottom: 4px;
+  margin-top: 15px;
 }
 
 .footer-navtext:hover {
@@ -466,6 +478,4 @@ html {
   .message-text {
     width: 100%;
   }
-
 }
-
