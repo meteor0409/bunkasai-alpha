@@ -415,6 +415,12 @@ html {
   display: block;
 }
 
+@supports (-webkit-touch-callout: none) {
+  .footer-logo img {
+    pointer-events: none;
+  }
+}
+
 .footer-title {
   font-size: 20px;
   text-align: center;

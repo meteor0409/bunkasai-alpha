@@ -44,7 +44,11 @@
   object-fit: contain; /* 全体を必ず表示 */
 }
 
-
+@supports (-webkit-touch-callout: none) {
+  .header-logo img {
+    pointer-events: none;
+  }
+}
 
 .header-title {
   font-weight: bold;
