@@ -57,12 +57,11 @@ body {
   justify-content: center;
 }
 
-.daiji img {
-  -webkit-user-select: none; /* iOS Safari */
-  user-select: none;
-  -webkit-touch-callout: none; /* 長押しメニュー無効 */
+@supports (-webkit-touch-callout: none) {
+  .daiji img {
+    pointer-events: none;
+  }
 }
-
 
 .daiji-1 {
   transform: scale(0.75);
