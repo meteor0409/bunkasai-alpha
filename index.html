@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF=8">
     <title>testpage</title>
-    <meta name="description" content="仮置き">
+    <meta name="description" content="ミスチェ用ページ">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="robots" content="noindex, follow">
     <link href="./css/reset.css" rel="stylesheet">
@@ -64,7 +64,6 @@
                     </div>
                 </div>
                 <p class="colon">：</p>
-
                 <div class="time-element">
                     <div class="time"><span id="sec"></span></div>
                     <div class="timelog">
@@ -187,8 +186,6 @@
         </div>
     </footer>
 </body>
-
-
 </html>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -228,5 +225,23 @@
   }
 
   update();
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const menuButton = document.querySelector(".menu");
+  const headerMenu = document.querySelector(".header-site-menu");
+
+  menuButton.addEventListener("click", () => {
+    menuButton.classList.toggle("close");
+    headerMenu.classList.toggle("is-show");
+  });
+
+  const menuLinks = document.querySelectorAll(".site-menu a");
+  menuLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      menuButton.classList.remove("close");
+      headerMenu.classList.remove("is-show");
+    });
+  });
 });
 </script>
