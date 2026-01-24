@@ -44,6 +44,13 @@
   object-fit: contain;
 }
 
+@media screen and (max-width: 340px) {
+  .header-logo {
+    width: 250px;
+    height: auto;
+  }
+}
+
 @supports (-webkit-touch-callout: none) {
   .header-logo img {
     pointer-events: none;
@@ -90,6 +97,7 @@
   display: none;
   background: none;
   border: none;
+  flex-shrink: 0;
 }
 
 .menu span {
