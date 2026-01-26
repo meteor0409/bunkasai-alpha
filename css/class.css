@@ -51,6 +51,7 @@ body {
 .daiji {
   display: flex;
   justify-content: center;
+  object-fit: contain;
 }
 
 @supports (-webkit-touch-callout: none) {
